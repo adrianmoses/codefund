@@ -1,0 +1,49 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.text_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :is_student %><br>
+    <%= f.check_box :is_student %>
+  </div>
+  <div class="field">
+    <%= f.label :school %><br>
+    <%= f.text_field :school %>
+  </div>
+  <div class="field">
+    <%= f.label :has_launched %><br>
+    <%= f.check_box :has_launched %>
+  </div>
+  <div class="field">
+    <%= f.label :about_me %><br>
+    <%= f.text_area :about_me %>
+  </div>
+  <div class="field">
+    <%= f.label :github %><br>
+    <%= f.text_field :github %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

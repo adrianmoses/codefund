@@ -1,0 +1,100 @@
+  <div class="container">
+    <div class="col-xs-12 text-center" style="margin-bottom: 20px;">
+        <div class="pull-right" style="display:inline;">
+            <a ng-if="user.campaign_status == 'not created'" href="/launch" class="btn btn-success btn-large">Launch Campaign</a>
+            <a ng-if="user.campaign_status == 'pending'" href="#" class="btn btn-warning btn-large">Campaign Pending</a>
+            <a ng-if="user.campaign_status == 'approved'" href="{{ user.campaign_url }}" class="btn btn-success btn-large">Go To Campaign</a>
+        </div>
+        <h1>Account Settings</h1>
+    </div>
+    <div class="col-xs-8 col-sm-offset-2">
+      <div class="main-account">
+        <div class="row">
+          <div class="account-container">
+            <form ng-submit="updateProfile(user)" class="profile-form" role="form">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <label for="Name" class="col-sm-offset-2 col-sm-2 control-label">Name</label>
+                    <div class="col-sm-4">
+                      <input ng-model="user.name" type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="Email" class="col-sm-offset-2 col-sm-2 control-label">Email</label>
+                    <div class="col-sm-4">
+                      <input type="email" ng-model="user.email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="Location" class="col-sm-offset-2 col-sm-2 control-label">Location</label>
+                    <div class="col-sm-4">
+                      <input type="text" ng-model="user.location" class="form-control" id="location" placeholder="Location">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="Photo" class="col-sm-offset-2 col-sm-2 control-label">Photo</label>
+                    <div class="col-sm-4">
+                      <img class="col-sm-offset-2 img-responsive img-circle account-img" ng-src="{{ user.photo }}"/>
+                      <input type="hidden" class="" ng-model="user.photo" value="user.photo">
+                      <input ng-file-select="onFileSelect($files)" type="file" class="" id="photo" value="upload-file">
+                      <div ng-show="isUploading" class="photo-progress progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ progress }}%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="School" class="col-sm-offset-2 col-sm-2 control-label">School</label>
+                    <div class="col-sm-4">
+                      <input type="school" class="form-control" ng-model="user.school" id="school" placeholder="School">
+                    </div>
+                  </div>
+                </div>
+                <hr/>
+              <div class="form-group">
+                <label for="" class="col-sm-offset-3 col-sm-4">About Me
+                  (<a href="http://daringfireball.net/projects/markdown/basics" target="_blank">Markdown</a> editor)
+                </label>
+                <div class="col-sm-12">
+                  <textarea ng-model="user.about_me" style="height:400px;" class="form-control"></textarea>
+                </div>
+              </div>
+              <span class="col-sm-offset-3 col-sm-4">About Me Preview</span>
+              <br/>
+              <div markdown text="{{user.about_me}}"class="about-me-preview">
+              </div>
+              <div class="form-group" style="overflow:auto">
+                <div class="col-sm-offset-4 col-sm-4">
+                  <button type="submit" class="btn btn-success">Update Profile</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="password-container">
+            <form ng-submit="updatePassword(credentials)" class="form-horizontal update-password-form" role="form">
+              <div class="form-group">
+                <label for="Name" class="col-sm-offset-2 col-sm-2 control-label">New Password</label>
+                <div class="col-sm-4">
+                  <input ng-model="credentials.new_password" type="password" class="form-control" id="newpw" placeholder="New Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Name" class="col-sm-offset-2 col-sm-2 control-label">Confirm New Password</label>
+                <div class="col-sm-4">
+                  <input ng-model="credentials.confirm_password" type="password" class="form-control" id="confirmpw" placeholder="Confirm New Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-4">
+                  <button type="submit" class="btn btn-success">Update Password</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

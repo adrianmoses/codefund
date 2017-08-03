@@ -1,0 +1,45 @@
+  <div class="container">
+    <div class="col-xs-12 text-center" style="margin-bottom: 20px;">
+        <h1>Sign In</h1>
+    </div>
+    <div class="row">
+      <div class="main-signup col-xs-8 col-sm-offset-2">
+        <div class="row">
+          <div class="signup-container">
+            <form ng-submit="signIn(credentials)" class="signin-form form-horizontal" name="signin">
+              <div class="form-group">
+                <label for="email" class="col-sm-2 col-sm-offset-2 control-label">Email</label>
+                <div class="col-sm-6">
+                  <input type="email" class="form-control" ng-model="credentials.email" id="email" placeholder="Email">
+                </div>
+             </div>
+              <div class="form-group">
+                <label for="password" class="col-sm-2 col-sm-offset-2 control-label">Password</label>
+                <div class="col-sm-6">
+                  <input type="password" class="form-control" ng-model="credentials.password" id="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-offset-4" style="margin-top:5px;margin-bottom:10px;">
+                Don't have an account? <a href="/signup">Sign up here</a>.
+              </div>
+              <!--<div class="form-group">
+                <div class="col-sm-offset-4 col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" ng-model="credentials.remember_me"> Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>-->
+              <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-6">
+                  <!--<a href="#!/account" class="btn btn-success">Sign In</a>-->
+                  <button type="submit" class="btn btn-block btn-success">Sign in</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

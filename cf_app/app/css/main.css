@@ -1,0 +1,401 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 100px;
+  background-color:#eeeeee;
+}
+
+.input-lg {
+  border-radius: 0px;
+}
+
+body.cover {
+  padding-top: 40px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  color:#2caa19;
+}
+
+.navbar-default {
+  border-top: 3px solid #2caa19;
+  background: #fff;
+  padding-top:10px;
+  padding-bottom:10px;
+  box-shadow: 0px 2px 3px  0 #ccc;
+}
+
+p {
+  display:block;
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+.icon {
+  display: block;
+  margin: 0 0 1.5em 0;
+  opacity: 0.35;
+  cursor: default;
+}
+
+.icon:before {
+  font-size: 5em;
+  line-height: 1em;
+}
+
+
+.btn-success, .progress-bar-success {
+  background-color: #2caa19;
+}
+
+.btn {
+  border-radius:0px;
+}
+
+.progress {
+  height: 10px;
+  border:none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #2caa19;
+}
+
+a.btn-success {
+  color: #fff;
+}
+
+.signup-btn {
+  margin: 5px;
+}
+
+.logo {
+  height: 20px;
+  width: 30px;
+}
+
+.white-box {
+  background:#fff;
+  color: #333;
+  width: auto;
+  white-space: nowrap;
+}
+
+.site-wrapper {
+  margin-top: -50px;
+  min-height: 500px;
+  background-color:white;
+}
+
+.site-wrapper-inner {
+  padding-top: 100px;
+  padding-left: 50px;
+  color:#fff;
+  height: 75vh;
+  background: url('../images/mb_stock.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+}
+
+.cover {
+  text-align: center;
+}
+
+.lm-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-discover,  .main-signup, .main-launch, .main-terms, .main-policy {
+  background-color:white;
+  box-shadow: 0px 2px 3px  0 #ccc;
+  min-height: 500px;
+  box-sizing:border-box;
+  outline:none;
+}
+
+.main-signup, .main-launch {
+  padding: 100px 50px 0px 50px;
+}
+
+.main-terms, .main-policy {
+  padding: 50px 50px 50px 50px;
+}
+
+.main-account {
+  padding-top: 20px;
+  box-sizing:border-box;
+  outline:none;
+  min-height: 500px;
+}
+
+.account-container, .password-container {
+  background-color:white;
+  box-shadow: 0px 2px 3px  0 #ccc;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+
+.fund-body {
+  margin: 10px 0 10px 0;
+  min-height:500px;
+}
+
+.fund-about, .fund-box {
+  background: #fff;
+  box-sizing:border-box;
+  outline:none;
+  box-shadow: 0px 2px 3px  0 #ccc;
+}
+
+.video-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.share-container {
+  display: inline-block;
+}
+
+.message-container, .about-container, .share-container,  .links-container,
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.privacy-container {
+  min-height: 600px;
+}
+
+.campaign-container {
+  border: 1px #eee solid;
+  border-radius: 5px;
+  width: 240px;
+  padding:20px 10px 0px 10px;
+  float:left;
+  margin: 10px;
+  height: 400px;
+  cursor: pointer;
+}
+
+.campaign-about {
+  padding-top: 10px;
+  min-height: 150px;
+}
+
+.signup-container {
+  padding: 20px 10px 0 10px;
+}
+
+.pledge-container {
+  padding: 20px 10px 20px 10px;
+}
+
+.campaign-list-img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.campaign-list {
+  margin:0 auto;
+  width: 30%;
+  margin-top:40px;
+}
+
+.current-amount {
+  font-size: 36px;
+  font-weight: 600px;
+}
+
+.days-remain {
+   font-size: 24px;
+   font-weight: 500px;
+}
+
+.amount-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.backers-container {
+  padding-top: 20px;
+}
+
+
+.backer-button {
+  margin: 0 auto;
+  height: 50px;
+  width: 150px;
+  line-height: 40px;
+}
+
+.footer {
+  margin-top: 60px;
+  color: #fff;
+  background-color: #222;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer a {
+  color:#fff;
+}
+
+.boption {
+  padding:10px;
+}
+
+.share-btn {
+  padding: 15px;
+  color:white;
+}
+
+.facebook-btn {
+  background-color:#3B5998;
+  margin-right:80px;
+}
+
+.twitter-btn {
+  background-color:#4099FF;
+}
+
+.nav-profile-img {
+  height:40px;
+  float: left;
+}
+
+
+a.profile-link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.profile-form {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.caret {
+  vertical-align: middle;
+}
+
+.dropdown-menu>li>a {
+  color: #2caa19;
+}
+
+.about-img {
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.account-img{
+  height: 120px;
+  width: 120px;
+}
+
+.campaign-user-img {
+  height: 240px;
+  width: 240px;
+  margin: 0 auto;
+}
+
+.campaign-video {
+  border:none;
+}
+
+.card-wrapper {
+  padding-left: 35px;
+}
+
+.photo-progress, .video-progress {
+  margin-top: 10px;
+}
+
+.alert {
+  position: fixed;
+  top: 12%;
+  right: 5px;
+  width: 300px;
+  height: 100px;
+  border-radius: 0px;
+  z-index: 100;
+}
+
+.section-header {
+  margin:10px 0 40px 0;
+}
+
+.alert-success {
+  background-color: #2caa19;
+  color:#fff;
+}
+
+.alert-success, .alert-dismissable .close {
+  color: #fff;
+}
+
+.fade-enter, .fade-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.fade-enter {
+  opacity:1;
+}
+.fade-enter.fade-enter-active {
+  opacity:0;
+}
+
+.fade-leave {
+  opacity:0;
+}
+.fade-leave.fade-leave-active {
+  opacity:1;
+}
+
+.about-me-preview {
+  margin: 0 auto;
+  width: 65%;
+  min-height: 200px;
+}
+
+.edit-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.icon-circle {
+  border-radius: 100%;
+  font-size: 1.25em;
+  height: 2.25em;
+  width: 2.25em;
+  line-height: 2.25em;
+  text-align:center
+}
+
+.fa-twitter {
+  color: white;
+  background: #70aecd;
+}
+
+.fa-youtube {
+  color: white;
+  background: #c4302b;
+}

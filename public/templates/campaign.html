@@ -1,0 +1,70 @@
+  <div class="container">
+    <div class="col-xs-12 text-center" style="margin-bottom: 20px;">
+      <img ng-src="{{ campaign.user.photo }}" class="img-responsive img-circle campaign-user-img" style="margin:0 auto;"/>
+      <h1>{{ campaign.user.name }}</h1>
+      <p>Wants to attend {{ campaign.school.name }} on {{ campaign.school_start_date | dateFormat: 'MMMM Do, YYYY'}}</p>
+    </div>
+    <div class="row main-fund">
+
+      <div class="col-xs-12 fund-body">
+        <div class="row">
+
+          <div class="col-xs-6 col-sm-offset-1 fund-about">
+            <div class="row">
+
+              <div class="col-xs-12">
+                <div class="video-container">
+                  <div class="fund-video">
+                    <iframe  class="campaign-video" width="560" height="315" ng-src="{{ campaign.video }}" frameborder="0" allowfullscreen></iframe>
+                    <!-- add youtube directive here -->
+                  </div>
+                </div>
+
+                <div class="share-container">
+                  <a data-href="{{campaign.url}}" data-action="like" data-show-faces="false" data-share="false" class="btn share-btn facebook-btn">
+                    <span class="fa fa-facebook"></span> Share
+                  </a>
+                  <a href="https://twitter.com/share" class="btn share-btn twitter-btn" data-url="{{campaign.url}}" data-via="ennuimoses">
+                    <span class="fa fa-twitter"></span> Share
+                  </a>
+                </div>
+                <hr/>
+
+                <div class="message-container">
+                  <div class="message" ng-bind-html="campaign.user.about_me_html">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-offset-1 fund-box">
+            <div class="row">
+
+              <div class="col-xs-12 fund-money">
+                <div class="amount-container">
+                  <div class="amount text-center">
+                    <span class="current-amount">{{ campaign.amount_funded | currencyFormat :'$0,0[.]00' }}</span>
+                    <br/> of {{ campaign.goal | currencyFormat:'$0,0[.]00' }}
+                    <br/>
+                    <br/>
+                    <br/> <span class="days-remain">{{ campaign.days_remaining }}</span> days remaining
+                  </div>
+                </div>
+
+                <div class="back-options-container text-center">
+                  <a href="/campaign/{{campaign.username}}/donate" class="btn btn-xlarge btn-success backer-button">Back {{ campaign.user.name }}</a>
+                </div>
+
+                <div class="backers-container text-center">
+                  <h4> Backers <span class="badge">{{ campaign.backers.length }}</span></h4>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>

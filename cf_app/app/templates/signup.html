@@ -1,0 +1,49 @@
+  <div class="container">
+    <div class="col-xs-12 text-center" style="margin-bottom: 20px;">
+        <h1>Sign Up</h1>
+    </div>
+    <div class="row">
+      <div class="main-signup col-xs-8 col-sm-offset-2">
+        <div class="row">
+         <div class="signup-container">
+            <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+            <form ng-submit="signUp(credentials)" class="signup-form form-horizontal" name="signup">
+              <div class="form-group">
+                <label for="name" class="col-sm-2 col-sm-offset-2 control-label">Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" ng-model="credentials.name" id="name" placeholder="Name">
+                </div>
+             </div>
+              <div class="form-group">
+                <label for="email" class="col-sm-2 col-sm-offset-2 control-label">Email</label>
+                <div class="col-sm-6">
+                  <input type="email" class="form-control" ng-model="credentials.email" id="email" placeholder="Email">
+                </div>
+             </div>
+              <div class="form-group">
+                <label for="email_confirm" class="col-sm-3 col-sm-offset-1 control-label">Confirm Email</label>
+                <div class="col-sm-6">
+                  <input type="email" class="form-control" ng-model="credentials.email_confirm" id="email_confirm" placeholder="Confirm Email">
+                </div>
+             </div>
+              <div class="form-group">
+                <label for="password" class="col-sm-2 col-sm-offset-2 control-label">Password</label>
+                <div class="col-sm-6">
+                  <input type="password" class="form-control" ng-model="credentials.password" id="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-offset-4" style="margin-top:5px;margin-bottom:10px;">
+                Already have an account? <a href="/signin">Sign in here</a>.
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-6">
+                  <!--<a href="#!/account" class="btn btn-success">Sign Up</a>-->
+                  <input type="submit" class="btn btn-block btn-success" name="submit" value="Sign Up" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

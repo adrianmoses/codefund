@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @campaign.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @campaign.end_date %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @campaign.duration %>
+</p>
+
+<p>
+  <strong>Backers:</strong>
+  <%= @campaign.backers %>
+</p>
+
+<p>
+  <strong>Amount funded:</strong>
+  <%= @campaign.amount_funded %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @campaign.user %>
+</p>
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaigns_path %>

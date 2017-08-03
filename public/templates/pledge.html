@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="col-xs-12 text-center" style="margin-bottom: 20px;">
+      <h1>Donation</h1>
+  </div>
+  <div class="row">
+    <div class="main-signup col-xs-8 col-sm-offset-2">
+      <div class="row">
+        <div class="pledge-container">
+          <form ng-submit="chargeCard()" class="signup-form form-horizontal" name="signup">
+            <div class="form-group">
+              <label for="pledgeAmount" class="col-sm-2 col-sm-offset-2 control-label">Donation Amount</label>
+              <div class="col-sm-6">
+                <input type="number" min="0" step="any" class="form-control" id="pledgeAmount" ng-model="pledgeInfo.pledge_amount" placeholder="Donation Amount">
+              </div>
+           </div>
+            <div class="form-group">
+              <label for="email" class="col-sm-2 col-sm-offset-2 control-label">Email</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" id="email" ng-model="pledgeInfo.email" placeholder="Email">
+              </div>
+            </div>
+           <div class="card-wrapper"></div>
+           <div class="form-group cc-container">
+              <label for="card_number" class="col-sm-2 col-sm-offset-2 control-label">Card Number</label>
+              <div class="col-sm-6">
+                  <input class="form-control" id="card_number" placeholder="Card number" ng-model="pledgeInfo.cardDetails.number" type="text" name="number">
+              </div>
+              <div class="col-sm-6 col-sm-offset-4">
+                  <input class="form-control" id="card_name" placeholder="Full name" ng-model="pledgeInfo.name" type="text" name="name">
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="col-sm-3 col-sm-offset-4">
+                  <input class="form-control" id="expiry" placeholder="MM/YY" ng-model="pledgeInfo.cardDetails.expiry" type="text" name="expiry">
+              </div>
+
+              <div class="col-sm-3">
+                  <input class="form-control" id="cvc" placeholder="CVC" ng-model="pledgeInfo.cardDetails.cvc" type="text" name="cvc">
+              </div>
+            </div>
+            <div class="col-sm-offset-5 col-sm-4" style="margin-top:5px;margin-bottom:20px;">
+              <img src="images/solid.png" class="img-responsive"/>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-block btn-success">Donate!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

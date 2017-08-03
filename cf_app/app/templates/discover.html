@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="col-xs-12 text-center" style="margin-bottom: 20px;">
+        <h1>Current Campaigns</h1>
+    </div>
+    <div class="row main-discover">
+      <div class="col-xs-12">
+        <div class="row campaign-list">
+          <div class="current-campaigns">
+            <div ng-repeat="campaign in campaigns" ng-click="goToCampaign(campaign)" class="campaign-container text-center">
+              <img class="img-responsive img-circle campaign-list-img" ng-src="{{ campaign.user.photo }}"/>
+              <div class="campaign-name">
+                <h5>{{ campaign.user.name }}</h5>
+              </div>
+              <div class="campaign-about">
+                {{ campaign.user.about_me_stripped | limitTo: 100 }}...
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success"
+                    role="progressbar"
+                    aria-valuenow="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: {{ ((campaign.amount_funded / campaign.goal) * 100).toFixed(2)}}%;">
+                  <span class="sr-only">{{ ((campaign.amount_funded / campaign.goal) * 100).toFixed(2) }}% Complete</span>
+                </div>
+              </div>
+              <div class="stats">
+                <div>
+                  <ul class="list-inline">
+                    <li><strong>{{ ((campaign.amount_funded / campaign.goal) * 100).toFixed(2) }}%</strong> <br/>funded</li>
+                    <li><strong>{{ campaign.backers.length }}</strong> <br/>backers</li>
+                    <li><strong>{{ campaign.days_remaining }}</strong> <br/>days left</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
